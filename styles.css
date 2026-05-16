@@ -186,6 +186,54 @@ h2 {
   width: 100%;
 }
 
+.marker-actions {
+  margin-top: 8px;
+}
+
+.marker-actions #removeMarker {
+  border-color: var(--danger);
+  background: var(--danger);
+}
+
+.polygon-save-row {
+  margin-top: 8px;
+}
+
+.saved-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.saved-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 78px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #f8faf9;
+}
+
+.saved-card strong {
+  display: block;
+  overflow: hidden;
+  font-size: 0.92rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.saved-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.saved-card button {
+  min-height: 34px;
+}
+
 .hint {
   margin: 10px 0 0;
   color: var(--muted);
@@ -244,6 +292,59 @@ h2 {
   height: 100%;
 }
 
+.map-wrap {
+  position: relative;
+}
+
+.polygon-toolbar {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 650;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(216, 224, 220, 0.95);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 36px rgba(29, 45, 39, 0.18);
+}
+
+.tool-button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  min-height: 42px;
+  place-items: center;
+  padding: 0;
+  color: var(--accent-strong);
+  background: #fff;
+  border-color: var(--line);
+}
+
+.tool-button:hover:not(:disabled) {
+  color: #fff;
+}
+
+.tool-button svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.danger-tool {
+  color: var(--danger);
+}
+
+.danger-tool:hover:not(:disabled) {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
 .leaflet-container {
   background: #d9e7df;
 }
@@ -294,5 +395,10 @@ h2 {
 
   .map-wrap {
     order: 1;
+  }
+
+  .polygon-toolbar {
+    top: 12px;
+    left: 12px;
   }
 }

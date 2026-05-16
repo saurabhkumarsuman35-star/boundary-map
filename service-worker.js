@@ -1,4 +1,4 @@
-const CACHE_NAME = "editable-area-map-v1";
+const CACHE_NAME = "editable-area-map-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -7,14 +7,7 @@ const APP_SHELL = [
   "./manifest.webmanifest",
   "./icons/app-icon.svg",
   "./icons/icon-192.png",
-  "./icons/icon-512.png",
-  "./dist/leaflet.css",
-  "./dist/leaflet.js",
-  "./dist/images/marker-icon.png",
-  "./dist/images/marker-icon-2x.png",
-  "./dist/images/marker-shadow.png",
-  "./dist/images/layers.png",
-  "./dist/images/layers-2x.png"
+  "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
