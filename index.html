@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0e7c66" />
+    <meta name="description" content="Editable polygon, pincode, city, and locality coverage map." />
+    <title>Editable Service Area Map</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="stylesheet" href="dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="panel" aria-label="Map tools">
+        <header class="brand-block">
+          <p class="eyebrow">Coverage planner</p>
+          <h1>Editable map</h1>
+          <button id="installApp" class="install-button" type="button" hidden>Install app</button>
+        </header>
+
+        <section class="tool-section">
+          <label class="field-label" for="searchInput">Search pincode, city, or locality</label>
+          <div class="search-row">
+            <input id="searchInput" type="search" autocomplete="off" placeholder="Try 560001, Bandra, Jaipur" />
+            <button id="searchButton" type="button">Search</button>
+          </div>
+          <div id="searchResults" class="result-list" aria-live="polite"></div>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-title">
+            <h2>Polygon editor</h2>
+            <span id="drawStatus">Idle</span>
+          </div>
+          <div class="button-grid">
+            <button id="startPolygon" type="button">Draw polygon</button>
+            <button id="finishPolygon" type="button" disabled>Finish</button>
+            <button id="cancelPolygon" type="button" disabled>Cancel</button>
+            <button id="deletePolygon" type="button" disabled>Delete selected</button>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-title">
+            <h2>Add pincode pin</h2>
+          </div>
+          <div class="pin-form">
+            <input id="pinPincode" inputmode="numeric" maxlength="6" placeholder="Pincode" />
+            <input id="pinCity" placeholder="City" />
+            <input id="pinLocality" placeholder="Locality" />
+            <button id="addPinMode" type="button">Place pin on map</button>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-title">
+            <h2>Import locations</h2>
+          </div>
+          <textarea id="importInput" placeholder="pincode,city,locality,lat,lng"></textarea>
+          <div class="button-grid single-action">
+            <button id="importLocations" type="button">Import rows</button>
+          </div>
+          <p id="importStatus" class="status-line" aria-live="polite"></p>
+        </section>
+
+        <section class="tool-section">
+          <div class="section-title">
+            <h2>Map data</h2>
+          </div>
+          <div class="button-grid">
+            <button id="exportGeojson" type="button">Export GeoJSON</button>
+            <button id="clearPins" type="button">Clear pins</button>
+          </div>
+          <textarea id="geojsonOutput" readonly placeholder="Exported GeoJSON appears here"></textarea>
+        </section>
+      </aside>
+
+      <section class="map-wrap">
+        <div id="map" aria-label="Editable searchable map"></div>
+      </section>
+    </main>
+
+    <script src="dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

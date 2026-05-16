@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Editable map app icon">
+  <rect width="512" height="512" rx="112" fill="#0e7c66"/>
+  <path d="M128 155l92-38 84 38 80-34v236l-80 34-84-38-92 38V155z" fill="#e8f7f2"/>
+  <path d="M220 117v236M304 155v236" fill="none" stroke="#0e7c66" stroke-width="20" stroke-linecap="round"/>
+  <path d="M150 292l70-84 64 48 84-96" fill="none" stroke="#d14c2f" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="150" cy="292" r="18" fill="#d14c2f"/>
+  <circle cx="220" cy="208" r="18" fill="#d14c2f"/>
+  <circle cx="284" cy="256" r="18" fill="#d14c2f"/>
+  <circle cx="368" cy="160" r="18" fill="#d14c2f"/>
+</svg>
